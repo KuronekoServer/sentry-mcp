@@ -34,8 +34,8 @@ catalogs:
       specifier: ^4.20260405.1
       version: 4.20260405.1
     '@modelcontextprotocol/server':
-      specifier: 2.0.0
-      version: 2.0.0
+      specifier: 2.3.0
+      version: 2.3.0
     '@radix-ui/react-accordion':
       specifier: ^1.2.20
       version: 1.2.20
@@ -249,7 +249,7 @@ importers:
         version: 1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3)
       '@modelcontextprotocol/server':
         specifier: 'catalog:'
-        version: 2.0.0
+        version: 2.3.0
       '@radix-ui/react-accordion':
         specifier: 'catalog:'
         version: 1.2.20(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -264,7 +264,7 @@ importers:
         version: 11.0.0-alpha.2(react@19.2.8)
       agents:
         specifier: 'catalog:'
-        version: 0.20.1(@ai-sdk/react@3.0.232(react@19.2.8)(zod@4.4.3))(@babel/core@7.28.0)(@babel/runtime@7.28.4)(@cloudflare/workers-types@4.20260405.1)(@modelcontextprotocol/client@2.0.0)(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3))(@modelcontextprotocol/server@2.0.0)(ai@6.0.64(zod@4.4.3))(react@19.2.8)(rolldown@1.0.0-beta.23)(vite@6.3.5(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.32.0)(tsx@4.20.3)(yaml@2.8.3))(zod@4.4.3)
+        version: 0.20.1(@ai-sdk/react@3.0.232(react@19.2.8)(zod@4.4.3))(@babel/core@7.28.0)(@babel/runtime@7.28.4)(@cloudflare/workers-types@4.20260405.1)(@modelcontextprotocol/client@2.0.0)(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3))(@modelcontextprotocol/server@2.3.0)(ai@6.0.64(zod@4.4.3))(react@19.2.8)(rolldown@1.0.0-beta.23)(vite@6.3.5(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.32.0)(tsx@4.20.3)(yaml@2.8.3))(zod@4.4.3)
       ai:
         specifier: 'catalog:'
         version: 6.0.64(zod@4.4.3)
@@ -397,7 +397,7 @@ importers:
         version: 1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3)
       '@modelcontextprotocol/server':
         specifier: 'catalog:'
-        version: 2.0.0
+        version: 2.3.0
       '@sentry/core':
         specifier: 'catalog:'
         version: 11.0.0-alpha.2
@@ -997,6 +997,7 @@ packages:
 
   '@cloudflare/vitest-pool-workers@0.14.1':
     resolution: {integrity: sha512-AuIvoGXi9bMjgD1636JtP84yGsjhdtsk23rYMVFLO9KB84rvwhVPkvwgBv74RbhbURXYDKWV5koPwPucFSFgUg==}
+    deprecated: '@cloudflare/vitest-pool-workers has been renamed to @cloudflare/vitest-plugin. This package will not receive future updates.'
     peerDependencies:
       '@vitest/runner': ^4.1.0
       '@vitest/snapshot': ^4.1.0
@@ -1980,6 +1981,10 @@ packages:
     resolution: {integrity: sha512-pJCEwGG7Lfr/+PQp9ZTwKXNeO5wzbfKL7H3MYpCorM4oFBoQrdjnBgEoqG+RjhsvS1FKrDbKux+M1HhlnGWqcA==}
     engines: {node: '>=20'}
 
+  '@modelcontextprotocol/core@2.3.0':
+    resolution: {integrity: sha512-09BHFaNVBe5pB2AhzCfLj0cqmsKLERvZQ4FblzP90UMGLaXVqdZPByFjURwsUYCmxonUW2yAwgTTvle+8O2/8w==}
+    engines: {node: '>=20'}
+
   '@modelcontextprotocol/sdk@1.30.0':
     resolution: {integrity: sha512-xKd8OIzlqNzcqcNumGAa6g+PW2kjD5vrpcKOnfldAUPP3j7lnqMPwlTXQm8gF+UwH72z0lqaRbjr9hqGz0eITA==}
     engines: {node: '>=18'}
@@ -1990,8 +1995,8 @@ packages:
       '@cfworker/json-schema':
         optional: true
 
-  '@modelcontextprotocol/server@2.0.0':
-    resolution: {integrity: sha512-YhHWdHfpFMQfd0prsEnxKeS3Qz3ytIGmsS0sth4KDjnacIT7hxk6hXHkJ9KysxlkvTM+WZAtQbbcUhdoP4Hvtw==}
+  '@modelcontextprotocol/server@2.3.0':
+    resolution: {integrity: sha512-+6b0LdsQLmHsvS7J6sQJ4weTpzUn61fU1JKS+321/+IyDYoHW5CR2Tgqcs6GgAAQvlesCo6yX3xttgmx+XGtJw==}
     engines: {node: '>=20'}
 
   '@mswjs/interceptors@0.39.8':
@@ -6502,6 +6507,10 @@ snapshots:
     dependencies:
       zod: 4.4.3
 
+  '@modelcontextprotocol/core@2.3.0':
+    dependencies:
+      zod: 4.4.3
+
   '@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3)':
     dependencies:
       '@hono/node-server': 1.19.9(hono@4.12.34)
@@ -6526,9 +6535,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@modelcontextprotocol/server@2.0.0':
+  '@modelcontextprotocol/server@2.3.0':
     dependencies:
-      '@modelcontextprotocol/core': 2.0.0
+      '@modelcontextprotocol/core': 2.3.0
       zod: 4.4.3
 
   '@mswjs/interceptors@0.39.8':
@@ -7338,13 +7347,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  agents@0.20.1(@ai-sdk/react@3.0.232(react@19.2.8)(zod@4.4.3))(@babel/core@7.28.0)(@babel/runtime@7.28.4)(@cloudflare/workers-types@4.20260405.1)(@modelcontextprotocol/client@2.0.0)(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3))(@modelcontextprotocol/server@2.0.0)(ai@6.0.64(zod@4.4.3))(react@19.2.8)(rolldown@1.0.0-beta.23)(vite@6.3.5(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.32.0)(tsx@4.20.3)(yaml@2.8.3))(zod@4.4.3):
+  agents@0.20.1(@ai-sdk/react@3.0.232(react@19.2.8)(zod@4.4.3))(@babel/core@7.28.0)(@babel/runtime@7.28.4)(@cloudflare/workers-types@4.20260405.1)(@modelcontextprotocol/client@2.0.0)(@modelcontextprotocol/sdk@1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3))(@modelcontextprotocol/server@2.3.0)(ai@6.0.64(zod@4.4.3))(react@19.2.8)(rolldown@1.0.0-beta.23)(vite@6.3.5(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.32.0)(tsx@4.20.3)(yaml@2.8.3))(zod@4.4.3):
     dependencies:
       '@babel/plugin-proposal-decorators': 8.0.2(@babel/core@7.28.0)
       '@cfworker/json-schema': 4.1.1
       '@modelcontextprotocol/client': 2.0.0
       '@modelcontextprotocol/sdk': 1.30.0(@cfworker/json-schema@4.1.1)(supports-color@8.1.1)(zod@4.4.3)
-      '@modelcontextprotocol/server': 2.0.0
+      '@modelcontextprotocol/server': 2.3.0
       '@rolldown/plugin-babel': 0.2.3(@babel/core@7.28.0)(@babel/runtime@7.28.4)(rolldown@1.0.0-beta.23)(vite@6.3.5(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.32.0)(tsx@4.20.3)(yaml@2.8.3))
       cron-schedule: 6.0.0
       esbuild: 0.28.1
